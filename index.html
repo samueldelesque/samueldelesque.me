@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Samuel Delesque | Interactive developer | Domani Studios / Pixyt / Light Architect / Volt | New York, NY</title>
+	<meta name="description" content="Samuel Delesque is an interactive developer based in New York. Currently working at Domani Studios. Founded Light Architect and Pixyt. Worked at Volt.">
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,400,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body>
+	<div id="menu" style="display:none">
+		<a href="http://www.linkedin.com/in/samueldelesque">LinkedIn</a>
+		<a href="mailto:contact@samueldelesque.com">Contact</a>
+		<a href="#/invoice" id="pay">Pay invoice</a>
+
+		<div id="payment" style="display:none">
+			<div class="inner">
+				<div class="options">
+					<h2>Send payment through</h2>
+					<p>Paypal: <b>samueldelesque@gmail.com</b></p>
+					<p>Bitcoin: </p>
+				</div>
+				<iframe id="coinbase_inline_iframe_9134a687a10443b32a8c0247a840506b" src="https://www.coinbase.com/checkouts/9134a687a10443b32a8c0247a840506b/inline" style="width: 100%; height: 440px; border: none;" allowtransparency="true" frameborder="0"></iframe>
+			</div>
+		</div>
+	</div>
+	<main>
+		<article>
+			<div class="wrap">
+				<figure class="text">
+					<h1>Samuel Delesque <small>Interactive developer</small></h1>
+				</figure>
+				<figure>
+					<img src="assets/img/projects/empire-1.jpg">
+				</figure>
+				<figure>
+					<img src="assets/img/projects/empire-2.jpg">
+				</figure>
+				<figure>
+					<img src="assets/img/projects/empire-3.jpg">
+				</figure>
+				<figure>
+					<img src="assets/img/projects/empire-4.jpg">
+				</figure>
+				<figure>
+					<img src="assets/img/projects/empire-5.jpg">
+				</figure>
+				<figure>
+					<img src="assets/img/projects/v76-1.jpg">
+				</figure>
+				<figure>
+					<img src="assets/img/projects/v76-2.jpg">
+				</figure>
+				<figure>
+					<img src="assets/img/projects/v76-3.jpg">
+				</figure>
+				<figure>
+					<img src="assets/img/projects/v76-4.jpg">
+				</figure>
+				<figure>
+					<img src="assets/img/projects/v76-5.jpg">
+				</figure>
+			</div>
+		</article>
+	</main>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	var w = $(window);
+	w.scroll(function(e){
+		var top = w.scrollTop();
+	});
+	var count = $("main figure").length;
+	$("main").css("height",count * 250);
+	var l = 300;
+	$("main figure").each(function(i,e){
+		$(this).css({
+			// left: l + (i * l),
+			zIndex: count - i
+		});
+		var el = $(this);
+		setTimeout(function(){el.addClass("show");}, 200 + (i * 100) * (1 + i / 5));
+	});
+	setTimeout(function(){
+		$("main article").addClass("ready");
+	}, count * 100 + 200);
+	w.trigger("scroll");
+
+	$("#pay").on("click",function(e){$("#payment").fadeIn();});
+	$("#payment").on("click",function(){$("#payment").fadeOut();});
+	$("#payment .inner").on("click",function(e){e.stopPropagation();});
+	</script>
+</body>
+</html>
