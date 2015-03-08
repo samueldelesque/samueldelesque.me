@@ -1,0 +1,11 @@
+{
+  "name": "cleanbean",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "repository": "",
+  "license": "",
+  "dependencies": {
+    "node-static": "~0.7.6"
+  }
+}
