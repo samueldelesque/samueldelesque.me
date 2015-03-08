@@ -1,6 +1,6 @@
 var static = require('node-static')
 var file = new static.Server('./public')
-var port = 6134
+var port = 9988
 
 require('http').createServer(function (request, response) {
     request.addListener('end', function () {
