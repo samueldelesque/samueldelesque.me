@@ -14,6 +14,7 @@ body{
 	margin: 0;
 	font-family: "Roboto Slab";
 	background: #f5f5f5;
+	min-height: 4000px;
 }
 #menu{
 	position: fixed;
@@ -45,10 +46,14 @@ body{
 	}
 }
 main{
-	padding-top:100px;
+	padding-top:0;
 	.transform(perspective(2000px));
-	position: relative;
+	position: fixed;
+	top:-70px;
+	left:0;
+	right: 0;
 	article{
+		height: 680px;
 		padding-bottom: 200px;
 		display: block;
 		overflow: hidden;

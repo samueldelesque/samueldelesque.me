@@ -63,11 +63,18 @@
 		</article>
 	</main>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="libs/jquery.min.js"></script>
 	<script>
 	var w = $(window);
+	var limit = 2000;
 	w.scroll(function(e){
 		var top = w.scrollTop();
+		if(top < limit){
+			$("main article .wrap").css("left",-top);
+		}
+		else{
+			$("main article .wrap").css("top",-(top-limit));
+		}
 	});
 	var count = $("main figure").length;
 	$("main").css("height",count * 250);
