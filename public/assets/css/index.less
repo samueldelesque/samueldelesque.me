@@ -88,20 +88,39 @@ main{
 			float: left;
 			margin-left:-140px;
 			height: 510px;
-			width: 340px;
-			.transition(.6s);
-			.transform(perspective(640px) rotateY(0.01deg) translate(1px,1px));
+			width: 287px;
+			.transition(1s);
+			.transform(perspective(640px) rotateY(0) translate(0,0));
+			p{
+				position: absolute;
+				bottom: 0;
+				background: rgba(255,255,255,.9);
+				margin: 0;
+				padding: 10px;
+				.opacity(0);
+			}
 			&:first-child{
 				margin-left:0;
 			}
 			&.show{
 				left:0;
-				.transform(perspective(640px) rotateY(-20deg) translate(1px,1px));
-				&.active{
-					.transform(perspective(640px) rotateY(0) translate(20px,85px) scale(1.2));
-					height: 510px;
-					width: 340px;
+				.transform(perspective(640px) rotateY(-20deg) translate(0,0));
+				&.active:first-child,&:first-child,&:hover:first-child{
+					margin-left: 40px;
+				}
+				&.active, &:hover{
+					.transform(perspective(640px) rotateY(0) translate(6px,34px) scale(1.1));
+					margin-left: -29px;
 					top:0;
+					p{
+						.opacity(.1);
+						.transition(.2s);
+					}
+					&:hover{
+						p{
+							.opacity(1);
+						}
+					}
 				}
 			}
 			&.text{

@@ -11,8 +11,8 @@
 	// })
 	$(".wrap figure").on("click",function(e){
 		var el = $(this)
-		$(".wrap figure").each(function(){$(this).removeClass("active top").css("zIndex",$(this).data("zindex"))})
-		$(this).addClass("active top").css("zIndex",el.data("zindex")+1)
+		$(".wrap figure").each(function(){$(this).removeClass("active top")})//.css("zIndex",$(this).data("zindex"))
+		$(this).addClass("active top")//.css("zIndex",el.data("zindex")+1)
 	})
 
 	var itemWidth = els.first.find("figure").outerWidth()-140,
