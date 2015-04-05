@@ -12,7 +12,7 @@ img{
 body{
 	padding: 0;
 	margin: 0;
-	font-family: "Lato", Serif;
+	font-family: "Lato", "Helvetica Neue", Helvetica, Sans-Serif;
 	font-size: 20px;
 	letter-spacing: -.3px;
 	background: #000;
@@ -20,6 +20,15 @@ body{
 	background-repeat: repeat;
 	background-position: 0 0;
 	background-attachment: fixed;
+}
+.marker{
+	position: absolute;
+	background: #F92122;
+	width: 25px;
+	height: 5px;
+	left: 20px;
+	top:20px;
+	z-index: 999;
 }
 #menu{
 	position: fixed;
@@ -123,6 +132,22 @@ main{
 	top:0;
 	left:0;
 	right: 0;
+	#intro{
+		.wrap{
+			max-width: 95%;
+			margin:0 auto;
+			padding: 50px;
+			h3{
+				margin: 0;
+				font-size: 180px;
+				line-height: 1;
+				letter-spacing: 0;
+				font-weight: bold;
+				color: #fff;
+				text-shadow: 10px -10px 0 #000;
+			}
+		}
+	}
 	#first{
 		background: #fff;
 		height: 800px;
@@ -131,7 +156,7 @@ main{
 		overflow: hidden;
 		width: 100%;
 		position: relative;
-		.box-shadow(0 0 50px rgba(0,0,0,.4));
+		.box-shadow(0 0 20px rgba(0,0,0,.4));
 		.progress{
 			position: absolute;
 			top: 0;
@@ -201,16 +226,6 @@ main{
 				padding:20px;
 				text-align: center;
 				color: #222;
-				h1{
-					font-size:36px;
-					text-transform: uppercase;
-					small{
-						font-size: 22px;
-						display: block;
-						font-weight: 100;
-						margin-top:20px;
-					}
-				}
 				&:hover{
 					color: #111;
 				}
@@ -228,8 +243,16 @@ main{
 		header{
 			h1{
 				font-weight: 100;
-				font-size: 40px;
-				margin: 0 0 10px 0;
+				font-size: 60px;
+				text-shadow:2px 2px 0 #b26;
+				margin: 0 50px 10px 50px;
+				// font-weight: bold;
+				strong{
+					text-shadow:2px 2px 0 #26b;
+				}
+				.city{
+					// color: #fff;
+				}
 			}
 			h2{
 				font-size:24px;
@@ -238,7 +261,7 @@ main{
 			}
 			background: #fff;
 			margin: 120px -2000px 0 -2000px;
-			.box-shadow(0 0 50px rgba(0,0,0,.4));
+			.box-shadow(0 0 20px rgba(0,0,0,.4));
 			padding: 50px 2000px;
 			text-align: center;
 		}
@@ -270,8 +293,8 @@ main{
 		}
 	}
 	.history{
-		background: #ffda4b;
-		.box-shadow(0 0 50px rgba(0,0,0,.4));
+		// background: #ffda4b;
+		// .box-shadow(0 0 20px rgba(0,0,0,.4));
 		margin: 0 -2000px;
 		padding: 50px 2000px;
 		h2{
@@ -299,7 +322,7 @@ main{
 		.wrap{
 			background: #fff;
 			position: relative;
-			.box-shadow(0 0 50px rgba(0,0,0,.4));
+			.box-shadow(0 0 20px rgba(0,0,0,.4));
 			margin: 0 -2000px;
 			padding: 50px 2000px 100px 2000px;
 		}

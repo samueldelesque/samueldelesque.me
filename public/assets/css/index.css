@@ -27,7 +27,7 @@ img {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Lato", Serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Sans-Serif;
   font-size: 20px;
   letter-spacing: -0.3px;
   background: #000;
@@ -35,6 +35,15 @@ body {
   background-repeat: repeat;
   background-position: 0 0;
   background-attachment: fixed;
+}
+.marker {
+  position: absolute;
+  background: #F92122;
+  width: 25px;
+  height: 5px;
+  left: 20px;
+  top: 20px;
+  z-index: 999;
 }
 #menu {
   position: fixed;
@@ -186,6 +195,20 @@ main {
   left: 0;
   right: 0;
 }
+main #intro .wrap {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 50px;
+}
+main #intro .wrap h3 {
+  margin: 0;
+  font-size: 180px;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 10px -10px 0 #000000;
+}
 main #first {
   background: #fff;
   height: 800px;
@@ -194,9 +217,9 @@ main #first {
   overflow: hidden;
   width: 100%;
   position: relative;
-  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 main #first .progress {
   position: absolute;
@@ -303,16 +326,6 @@ main #first .wrap figure.text {
   text-align: center;
   color: #222;
 }
-main #first .wrap figure.text h1 {
-  font-size: 36px;
-  text-transform: uppercase;
-}
-main #first .wrap figure.text h1 small {
-  font-size: 22px;
-  display: block;
-  font-weight: 100;
-  margin-top: 20px;
-}
 main #first .wrap figure.text:hover {
   color: #111;
 }
@@ -330,16 +343,20 @@ main #second {
 main #second header {
   background: #fff;
   margin: 120px -2000px 0 -2000px;
-  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   padding: 50px 2000px;
   text-align: center;
 }
 main #second header h1 {
   font-weight: 100;
-  font-size: 40px;
-  margin: 0 0 10px 0;
+  font-size: 60px;
+  text-shadow: 2px 2px 0 #b26;
+  margin: 0 50px 10px 50px;
+}
+main #second header h1 strong {
+  text-shadow: 2px 2px 0 #26b;
 }
 main #second header h2 {
   font-size: 24px;
@@ -380,10 +397,6 @@ main .divider b {
   margin: 8px;
 }
 main .history {
-  background: #ffda4b;
-  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
   margin: 0 -2000px;
   padding: 50px 2000px;
 }
@@ -414,9 +427,9 @@ main #third {
 main #third .wrap {
   background: #fff;
   position: relative;
-  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   margin: 0 -2000px;
   padding: 50px 2000px 100px 2000px;
 }
