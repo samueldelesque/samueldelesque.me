@@ -10,7 +10,7 @@
 		third: $("#third .wrap"),
 		main: $("main"),
 		marker: $(".marker"),
-		logitems: $("#second .logitem"),
+		logitems: $("#first .logitem"),
 		menuToggle: $("#menu-toggle")
 	}
 
@@ -20,53 +20,54 @@
 
 	$(".mailtoemail").attr("href","mailto:hello@"+"samuel"+"delesque.me?subject=Awesome work!")
 
-	var itemWidth = els.first.find("figure").outerWidth(true,true)-140,
+	var itemWidth = els.second.find("figure").outerWidth(true,true)-140,
 		introHeight = els.first.offset().top - 50,
 		limits = {},
-		progressBar = els.first.siblings(".progress")
+		progressBar = els.second.siblings(".progress")
 
-	limits.first = els.first.find("figure").length * itemWidth - w.width() + 900
-	limits.second = limits.first + els.second.height()
+	limits.first = els.first.height()
+	limits.second = limits.first + els.second.find("figure").length * itemWidth - w.width() + 900
 	limits.third = limits.second + els.third.height()
 
 	w.scroll(function(e){
 		var top = w.scrollTop();
-		if(top < introHeight){
-			els.main.css({top:-(top)})
-			progressBar.css({width:0})
-			var shadowTop = top/introHeight*30
-			els.introTitle.css("text-shadow","10px "+(-10+shadowTop)+"px 0 #000")
-		}
-		else if(top < limits.first){
-			var percentDone = (top-introHeight)/(limits.first-introHeight)*100
-			progressBar.css({width:percentDone+"%"});
-			els.first.css({left:-(top-introHeight)});
-			els.main.css({top:-introHeight});
-		}
-		else{
-			progressBar.css({width:"100%"})
-			els.first.css({left:-limits.first+introHeight})
-			els.main.css({top:-(top-limits.first)-introHeight})
-		}
-		if(top < limits.second + w.height() && top > limits.first){
-			var l = -(limits.second-top) / (els.second.height()-2000) * 2000 - 1600
-			var opacity = (500 - l)
-			console.log(l)
-			els.logitems.each(function(e,i){
-				$(this).css("left",Math.max(0,l + (250 * $(this).index())))
-			})
-		}
-		else if(top > limits.second){
-			els.logitems.css("left",0)
-		}
-		else{
-			els.logitems.css("left",2000)
-		}
+		// if(top < introHeight){
+		// 	els.main.css({top:-(top)})
+		// 	progressBar.css({width:0})
+		// 	var shadowTop = top/introHeight*30
+		// 	els.introTitle.css("text-shadow","10px "+(-10+shadowTop)+"px 0 #000")
+		// }
+		// else 
+		els.main.css({top:-top})
 
-		if(top > limits.third){
-			var t = (top - limits.third) / 2;
-			els.third.css({top:t});
-		}
+		// if(top < limits.first){
+		// 	progressBar.css({width:0})
+		// 	els.first.css({left:0})
+		// }
+		// else if(top < limits.second){
+		// 	var percentDone = (top-introHeight)/(limits.second-introHeight)*100
+		// 	progressBar.css({width:percentDone+"%"});
+		// 	els.second.css({left:-(top-introHeight)});
+		// 	els.main.css({top:-introHeight});
+		// }
+		// else{
+		// 	progressBar.css({width:"100%"})
+		// 	els.first.css({left:-limits.first+introHeight})
+		// }
+		// if(top > limits.second){
+		// 	var l = -(limits.first-top) / (els.first.height()-2000) * 2000 - 1600
+		// 	els.logitems.each(function(e,i){
+		// 		$(this).css("left",Math.max(0,l + (250 * $(this).index())))
+		// 	})
+		// }
+		// else{
+		// 	els.logitems.css("left",2000)
+		// }
+
+		// if(top > limits.third){
+		// 	var t = (top - limits.third) / 2;
+		// 	els.third.css({top:t});
+		// }
 
 		body.css("background-position","0 "+(-top/1.25)+"px")
 	});

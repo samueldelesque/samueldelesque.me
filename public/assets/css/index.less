@@ -15,8 +15,8 @@ body{
 	font-family: "Lato", "Helvetica Neue", Helvetica, Sans-Serif;
 	font-size: 20px;
 	letter-spacing: -.3px;
-	background: #000;
-	background-image: url(/assets/img/triangle-pattern.png);
+	background: #fafafa;
+	// background-image: url(/assets/img/triangle-pattern.png);
 	background-repeat: repeat;
 	background-position: 0 0;
 	background-attachment: fixed;
@@ -149,6 +149,58 @@ main{
 		}
 	}
 	#first{
+		width: 880px;
+		max-width: 90%;
+		margin: 0 auto;
+		header{
+			background: #fff;
+			margin: 120px -2000px 0 -2000px;
+			// .box-shadow(0 0 20px rgba(0,0,0,.4));
+			padding: 50px 2000px;
+			h1{
+				font-weight: bold;
+				text-align: left;
+				font-size: 60px;
+				color:#26b;
+				position: relative;
+				&:after{
+					content: "";
+					position: absolute;
+					left: 0;
+					width: 412px;
+					height: 9px;
+					background: #26b;
+					bottom: -30px;
+				}
+				strong{
+					text-shadow:2px 2px 0 #26b;
+				}
+				// .hi{
+				// 	display: block;
+				// 	// font-size:80px;
+				// 	font-weight: 100;
+				// 	color: #b26;
+				// }
+				.role{
+					display: block;
+				}
+				// .city{
+				// 	font-weight: 100;
+				// 	color: #26b;
+				// 	// color: #fff;
+				// }
+			}
+			h2{
+				font-size:24px;
+				margin: 0;
+				font-weight: 100;
+			}
+			.mission{
+				color: #26b;
+			}
+		}
+	}
+	#second{
 		background: #fff;
 		height: 800px;
 		padding: 50px;
@@ -156,7 +208,7 @@ main{
 		overflow: hidden;
 		width: 100%;
 		position: relative;
-		.box-shadow(0 0 20px rgba(0,0,0,.4));
+		// .box-shadow(0 0 20px rgba(0,0,0,.4));
 		.progress{
 			position: absolute;
 			top: 0;
@@ -236,36 +288,6 @@ main{
 			}
 		}
 	}
-	#second{
-		width: 880px;
-		max-width: 90%;
-		margin: 0 auto;
-		header{
-			h1{
-				font-weight: 100;
-				font-size: 60px;
-				text-shadow:2px 2px 0 #b26;
-				margin: 0 50px 10px 50px;
-				// font-weight: bold;
-				strong{
-					text-shadow:2px 2px 0 #26b;
-				}
-				.city{
-					// color: #fff;
-				}
-			}
-			h2{
-				font-size:24px;
-				margin: 0;
-				font-weight: 100;
-			}
-			background: #fff;
-			margin: 120px -2000px 0 -2000px;
-			.box-shadow(0 0 20px rgba(0,0,0,.4));
-			padding: 50px 2000px;
-			text-align: center;
-		}
-	}
 	.ctas{
 		margin: 40px 0 0 0;
 	}
@@ -298,21 +320,32 @@ main{
 		margin: 0 -2000px;
 		padding: 50px 2000px;
 		h2{
-			color: #fff;
+			font-size: 44px;
+			// color: #fff;
 			font-weight: bold;
-			text-shadow:0 0 8px rgba(0, 0, 0, 0.1);
+			// text-shadow:0 0 8px rgba(0, 0, 0, 0.1);
 			padding: 0 20px;
 		}
 	}
 	.logitem{
 		background: #fff;
 		position: relative;
-		border-left:5px solid #ebebeb;
-		.box-shadow(4px 4px 8px rgba(0,0,0,0.1));
+		border-left:5px solid #f7f7f7;
+		// .box-shadow(4px 4px 8px rgba(0,0,0,0.1));
 		margin:20px 0;
 		padding: 20px;
+		.transition(.2s);
 		h3{
 			margin: 0;
+		}
+		.time{
+			font-size: 14px;
+			font-weight: 100;
+		}
+		&:hover{
+			background-color: #26b;
+			color: #fff;
+			padding: 30px 20px;
 		}
 	}
 	#third{
@@ -322,7 +355,7 @@ main{
 		.wrap{
 			background: #fff;
 			position: relative;
-			.box-shadow(0 0 20px rgba(0,0,0,.4));
+			// .box-shadow(0 0 20px rgba(0,0,0,.4));
 			margin: 0 -2000px;
 			padding: 50px 2000px 100px 2000px;
 		}
