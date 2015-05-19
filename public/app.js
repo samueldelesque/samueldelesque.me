@@ -54,7 +54,7 @@
 	
 	w.on("resize",function(){
 		if(w.width() < 640) body.css("height","auto")
-		else body.css("height", mobileFolioOffset + mobileFolioWidth + els.third.outerHeight(true,true) + 150);
+		else body.css("height", mobileFolioOffset + mobileFolioWidth + els.third.outerHeight(true,true) + 1300);
 	})
 	w.trigger("resize")
 
