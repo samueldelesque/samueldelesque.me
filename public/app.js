@@ -5,9 +5,9 @@
 	var els = {
 		intro: $("#intro"),
 		introTitle: $("#intro h3"),
-		first: $("#first .wrap"),
-		second: $("#second .wrap"),
-		third: $("#third .wrap"),
+		first: $("#first"),
+		second: $("#second"),
+		third: $("#third"),
 		main: $("main"),
 		marker: $(".marker"),
 		logitems: $("#first .logitem"),
@@ -21,60 +21,40 @@
 	$(".mailtoemail").attr("href","mailto:hello@"+"samuel"+"delesque.me?subject=Awesome work!")
 
 	var itemWidth = els.second.find("figure").outerWidth(true,true)-140,
-		introHeight = els.first.offset().top - 50,
-		limits = {},
-		progressBar = els.second.siblings(".progress")
+		progressBar = els.second.find(".wrap").siblings(".progress"),
+		mobileFolioWidth = els.second.find("figure").length * itemWidth - 500,
+		mobileFolioOffset = els.second.offset().top
 
-	limits.first = els.first.height()
-	limits.second = limits.first + els.second.find("figure").length * itemWidth - w.width() + 900
-	limits.third = limits.second + els.third.height()
 
 	w.scroll(function(e){
+		if(w.width() < 640) return;
+
 		var top = w.scrollTop();
-		// if(top < introHeight){
-		// 	els.main.css({top:-(top)})
-		// 	progressBar.css({width:0})
-		// 	var shadowTop = top/introHeight*30
-		// 	els.introTitle.css("text-shadow","10px "+(-10+shadowTop)+"px 0 #000")
-		// }
-		// else 
-		els.main.css({top:-top})
 
-		// if(top < limits.first){
-		// 	progressBar.css({width:0})
-		// 	els.first.css({left:0})
-		// }
-		// else if(top < limits.second){
-		// 	var percentDone = (top-introHeight)/(limits.second-introHeight)*100
-		// 	progressBar.css({width:percentDone+"%"});
-		// 	els.second.css({left:-(top-introHeight)});
-		// 	els.main.css({top:-introHeight});
-		// }
-		// else{
-		// 	progressBar.css({width:"100%"})
-		// 	els.first.css({left:-limits.first+introHeight})
-		// }
-		// if(top > limits.second){
-		// 	var l = -(limits.first-top) / (els.first.height()-2000) * 2000 - 1600
-		// 	els.logitems.each(function(e,i){
-		// 		$(this).css("left",Math.max(0,l + (250 * $(this).index())))
-		// 	})
-		// }
-		// else{
-		// 	els.logitems.css("left",2000)
-		// }
+		if(top < els.second.offset().top){
+			els.second.find(".wrap").css("margin-left",0)
+			els.main.css({top:-top})
+			progressBar.css({width:"0%"})
+		}
+		else if(top > mobileFolioOffset && top < mobileFolioOffset + mobileFolioWidth){
+			var done = (top-mobileFolioOffset)/mobileFolioWidth * 100
+			els.second.find(".wrap").css("margin-left",-(top-mobileFolioOffset))
+			els.main.css({top:-mobileFolioOffset})
+			progressBar.css({width:done+"%"})
+		}
+		else{
+			els.second.find(".wrap").css("margin-left",-mobileFolioWidth)
+			els.main.css({top:-(top-mobileFolioWidth)})
+			progressBar.css({width:"100%"})
+		}
 
-		// if(top > limits.third){
-		// 	var t = (top - limits.third) / 2;
-		// 	els.third.css({top:t});
-		// }
-
-		body.css("background-position","0 "+(-top/1.25)+"px")
+		// body.css("background-position","0 "+(-top/1.25)+"px")
 	});
 	var count = $("main figure").length;
 	
 	w.on("resize",function(){
-		body.css("height", 5600 + els.second.height() + els.third.height());
+		if(w.width() < 640) body.css("height","auto")
+		else body.css("height", mobileFolioOffset + mobileFolioWidth + els.third.outerHeight(true,true) + 150);
 	})
 	w.trigger("resize")
 
