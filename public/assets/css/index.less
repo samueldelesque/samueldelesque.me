@@ -154,9 +154,11 @@ main{
 		max-width: 90%;
 		margin: 0 auto;
 		header{
+			margin-top:50px;
 			padding: 20px;
 			background: #fff;
 			h1{
+				margin: 0;
 				font-weight: bold;
 				text-align: left;
 				font-size: 60px;
@@ -196,14 +198,15 @@ main{
 				font-weight: 100;
 			}
 			.mission{
+				margin-top:30px;
 				color: #26b;
 			}
 		}
 	}
 	#second{
-		background: #fff;
 		height: 800px;
 		padding: 50px;
+		margin-top:100px;
 		display: block;
 		overflow: hidden;
 		width: 100%;
@@ -231,60 +234,69 @@ main{
 			}
 		}
 
-		.wrap figure{
-			position: relative;
-			top:30px;
-			left: 4000px;
-			float: left;
-			margin-left:-140px;
-			height: 510px;
-			width: 287px;
-			.transition(1s);
-			.transform(perspective(640px) rotateY(0) translate(0,0));
-			p{
-				position: absolute;
-				bottom: 0;
-				background: rgba(255,255,255,.9);
-				margin: 0;
-				padding: 10px;
-				.opacity(0);
-			}
-			&:first-child{
-				margin-left:0;
-			}
-			&.show{
-				left:0;
-				.transform(perspective(640px) rotateY(-20deg) translate(0,0));
-				&.active:first-child,&:first-child,&:hover:first-child{
-					margin-left: 40px;
+		.wrap{
+			figure{
+				position: relative;
+				top:30px;
+				left: 4000px;
+				float: left;
+				margin-left:-140px;
+				height: 510px;
+				width: 287px;
+				.transition(.3s);
+				.transform(perspective(640px) rotateY(0) translate(0,0));
+				&.cover{
+					background: #fff;
+					padding: 190px 20px 20px 20px;
+					border-left: 5px solid #26b;
+					.box-shadow(2px 2px 5px rgba(0,0,0,0.2));
+					color: #26b;
 				}
-				&.active, &:hover{
-					.transform(perspective(640px) rotateY(0) translate(6px,34px) scale(1.1));
-					margin-left: -29px;
-					top:0;
-					p{
-						.opacity(.1);
-						.transition(.2s);
+				p{
+					position: absolute;
+					bottom: 0;
+					background: rgba(255,255,255,.9);
+					margin: 0;
+					padding: 10px;
+					.opacity(0);
+				}
+				&:first-child{
+					margin-left:0;
+				}
+				&.show{
+					left:0;
+					.transform(perspective(640px) rotateY(-20deg) translate(0,0));
+					&.active:first-child,&:first-child,&:hover:first-child{
+						margin-left: 250px;
 					}
-					&:hover{
+					&.active, &:hover{
+						.transform(perspective(640px) rotateY(0) translate(6px,34px) scale(1.1));
+						margin-left: -29px;
+						top:0;
 						p{
-							.opacity(1);
+							.opacity(.1);
+							.transition(.2s);
+						}
+						&:hover{
+							p{
+								.opacity(1);
+							}
 						}
 					}
 				}
-			}
-			&.text{
-				background: rgba(55,55,55,.98);
-				padding:20px;
-				text-align: center;
-				color: #222;
-				&:hover{
-					color: #111;
+				&.text{
+					background: rgba(55,55,55,.98);
+					padding:20px;
+					text-align: center;
+					color: #222;
+					&:hover{
+						color: #111;
+					}
 				}
-			}
-			img{
-				height: 100%;
-				.box-shadow(2px 2px 6px rgba(120,120,120,.3));
+				img{
+					height: 100%;
+					.box-shadow(2px 2px 6px rgba(120,120,120,.3));
+				}
 			}
 		}
 	}
@@ -315,18 +327,46 @@ main{
 		}
 	}
 	.focus{
-		padding: 30px 0;
+		padding: 20px;
+		border-left: 5px solid #26b;
+		background: #fff;
+		h2{
+			color: #26b;
+		}
+	}
+	.project{
+		background: #123;
+		cursor: pointer;
+		color: #fff;
+		padding: 20px;
+		margin: 20px 0 0 0;
+		.transition(.2s);
+		h3{
+			margin: 0;
+			font-weight: 100;
+		}
+		p{
+			font-size: 16px;
+			font-weight: 100;
+		}
+		a{
+			color: #fff;
+			font-weight: 100;
+		}
+		&:hover{
+			.transform(scale(1.06));
+		}
 	}
 	.grid{
 		.clearfix;
 		.col{
 			display: inline-block;
 			float: left;
-			&.third{
-				width: 31.333%;
-				margin-left: 3%;
-				&:first-child{
-					margin-left: 0;
+			&.small{
+				width: 32%;
+				margin-right: 2%;
+				&.third{
+					margin-right: 0;
 				}
 			}
 		}
@@ -351,9 +391,6 @@ main{
 		.time{
 			font-size: 14px;
 			font-weight: 100;
-		}
-		&:hover{
-			padding: 30px 20px;
 		}
 	}
 	#third{
@@ -389,17 +426,21 @@ main{
 	}
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 800px){
 	body{
 		font-size: 16px;
+		padding-bottom: 50px;
 	}
 	main{
 		position: relative;
+		.project{
+			margin-top:20px;
+		}
 		.grid{
 			.col{
 				display: block;
 				float: none;
-				&.third,&.two-third{
+				&.small{
 					width: 100%;
 					margin-left: 0;
 				}
