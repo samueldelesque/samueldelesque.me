@@ -28,14 +28,18 @@
 		progressBar = els.second.find(".wrap").siblings(".progress"),
 		mobileFolioWidth = els.second.find("figure").length * itemWidth - 500,
 		mobileFolioOffset = els.second.offset().top
-		
-		if(w.width() < 800) body.css("height","auto")
-		else body.css("height", mobileFolioOffset + mobileFolioWidth + els.third.outerHeight(true,true) + 1300);
+
+		if(w.width() < 800){
+			body.css("height","auto")
+		}
+		else{
+			body.css("height", mobileFolioOffset + mobileFolioWidth + els.third.outerHeight(true,true) + 1300)
+		}
 	})
 	w.trigger("resize")
 
 	w.scroll(function(e){
-		if(w.width() < 800) return;
+		if(w.width() < 800)return;
 
 		var top = w.scrollTop();
 
