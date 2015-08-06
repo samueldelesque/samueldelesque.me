@@ -2,8 +2,10 @@
 	$("html,body").css("scrollTop",0)
 	var w = $(window),
 		body = $("body"),
+        eadReceived = new Date('2015-04-24').getTime();
 		els = {
 			intro: $("#intro"),
+            ead: $("#ead"),
 			introTitle: $("#intro h3"),
 			first: $("#first"),
 			second: $("#second"),
@@ -20,6 +22,10 @@
 	els.menuToggle.on("click",function(){
 		body.toggleClass("active-menu")
 	})
+
+    var updateEAD = setInterval(function(){
+        els.ead.html((new Date().getTime() - eadReceived) / 1000 / 86400)
+    }, 100)
 
 	var itemWidth,progressBar,mobileFolioWidth,mobileFolioOffset
 
@@ -63,7 +69,7 @@
 	w.trigger("scroll")
 
 	var count = $("main figure").length;
-	
+
 
 	var l = 300;
 	$("main figure").each(function(i,e){
