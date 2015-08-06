@@ -24,7 +24,7 @@
 	})
 
     var updateEAD = setInterval(function(){
-        els.ead.html((new Date().getTime() - eadReceived) / 1000 / 86400)
+        els.ead.html(Math.round((new Date().getTime() - eadReceived) / 1000 / 86400)+" days")
     }, 100)
 
 	var itemWidth,progressBar,mobileFolioWidth,mobileFolioOffset

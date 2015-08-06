@@ -228,6 +228,15 @@ main #first header h1 {
   color: #26b;
   position: relative;
 }
+main #first .status{
+    font-size: 24px;
+    margin:20px 0;
+    color:#26b;
+    position: relative;
+}
+main #first .status strong{
+    color: red;
+}
 main #first header h1:after {
   content: "";
   position: absolute;
