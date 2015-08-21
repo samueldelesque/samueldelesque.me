@@ -250,7 +250,7 @@ main #first header h1:after {
 main #first header h1 strong {
   text-shadow: 2px 2px 0 #26b;
 }
-main #first header h1 .role {
+main #first header h1 span {
   display: block;
 }
 main #first header h2 {
