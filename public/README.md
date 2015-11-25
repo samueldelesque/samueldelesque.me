@@ -1,4 +1,0 @@
-samueldelesque.me
-=================
-
-My resume.

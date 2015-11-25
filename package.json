@@ -1,12 +1,29 @@
 {
-  "name": "cleanbean",
-  "private": true,
-  "version": "0.0.1",
-  "description": "",
-  "repository": "",
-  "license": "",
+  "name": "samueldelesque.me",
+  "version": "1.0.0",
+  "description": "Resume of Samuel Delesque",
+  "main": "index.js",
   "dependencies": {
-    "less-monitor": "^0.2.0",
-    "node-static": "~0.7.6"
-  }
+    "http-server": "^0.8.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samueldelesque/samueldelesque.me.git"
+  },
+  "keywords": [
+    "resume",
+    "javascript",
+    "new",
+    "york"
+  ],
+  "author": "Samuel Delesque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samueldelesque/samueldelesque.me/issues"
+  },
+  "homepage": "https://github.com/samueldelesque/samueldelesque.me#readme"
 }
