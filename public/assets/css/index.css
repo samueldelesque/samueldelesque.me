@@ -523,19 +523,17 @@ main #third .cta {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  display: block;
   position: relative;
-  width: 100%;
   padding: 20px;
   color: #fff;
-  font-size: 36px;
-  -webkit-box-shadow: 8px 8px 0 0 #bbbbbb;
-  -moz-box-shadow: 8px 8px 0 0 #bbbbbb;
-  box-shadow: 8px 8px 0 0 #bbbbbb;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  font-size: 16px;
+  -webkit-box-shadow: 4px 4px 0 0 #bbbbbb;
+  -moz-box-shadow: 4px 4px 0 0 #bbbbbb;
+  box-shadow: 4px 4px 0 0 #bbbbbb;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
   top: 0;
   text-align: center;
   text-transform: uppercase;
@@ -543,11 +541,11 @@ main #third .cta {
   letter-spacing: 2px;
 }
 main #third .cta:hover {
-  top: 8px;
-  background: #ffda4b;
-  -webkit-box-shadow: 8px -8px 0 0 #dfba3b;
-  -moz-box-shadow: 8px -8px 0 0 #dfba3b;
-  box-shadow: 8px -8px 0 0 #dfba3b;
+  top: 4px;
+  background: #26b;
+  -webkit-box-shadow: -4px -4px 0 0 rgb(52, 68, 110);
+  -moz-box-shadow: -4px -4px 0 0 rgb(52, 68, 110);
+  box-shadow: -4px -4px 0 0 rgb(52, 68, 110);
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 800px) {
