@@ -230,7 +230,7 @@ main #first header h1 {
   margin: 0;
   font-weight: bold;
   text-align: left;
-  font-size: 60px;
+  font-size: 40px;
   color: #26b;
   position: relative;
 }
@@ -265,7 +265,7 @@ main #first header h2 {
   font-weight: 100;
 }
 main #first header .mission {
-  margin-top: 30px;
+  margin-top: 60px;
   color: #26b;
 }
 main #second {
