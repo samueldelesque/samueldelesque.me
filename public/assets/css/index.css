@@ -23,11 +23,7 @@ body {
   margin: 0;
   font-family: "Lato", "Helvetica Neue", Helvetica, Sans-Serif;
   font-size: 20px;
-  letter-spacing: -0.3px;
   background: #fafafa;
-  background-repeat: repeat;
-  background-position: 0 0;
-  background-attachment: fixed;
 }
 main {
   padding: 50px 0;
@@ -136,34 +132,25 @@ article header .mission {
   color: #26b;
 }
 .project {
-  background: #123;
-  cursor: pointer;
+  background: #222;
   color: #fff;
   padding: 20px;
   margin: 20px 0 0 0;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 .project h3 {
   margin: 0;
-  font-weight: 100;
+  color: #bbb;
 }
 .project p {
   font-size: 16px;
-  font-weight: 100;
+  color: #888;
 }
 .project a {
-  color: #fff;
-  font-weight: 100;
+  color: #666;
 }
 .project:hover {
-  -webkit-transform: scale(1.06);
-  -moz-transform: scale(1.06);
-  -o-transform: scale(1.06);
-  -ms-transform: scale(1.06);
-  transform: scale(1.06);
+  transform: scale(1.02);
 }
 .grid {
   zoom: 1;
