@@ -1,12 +1,7 @@
 samueldelesque.me
 =================
 
-My resume.
-=======
-Resume website
-==============
-
-Hello! I am a web developer based in NYC. I have been building JS and PHP software for the last 5 years. Get in touch if you would like to collaborate!
+Hello! I am a web developer based in NYC. I code in Javascript most of the time.
 
 
 ### Credits
