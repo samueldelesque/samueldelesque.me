@@ -1,10 +1,4 @@
 .DS_Store
-sftp-config.json
 node_modules
-<<<<<<< HEAD
-.git
 .local
 .config
-=======
-
->>>>>>> 556217ac201816e288434d1082755b1c5cd149c0
