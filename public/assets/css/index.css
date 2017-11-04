@@ -49,6 +49,12 @@ body {
 main {
   padding: 60px 0;
 }
+pre {
+  font-size: 11px;
+  background-color: #26b;
+  color: white;
+  padding: 20px;
+}
 article {
   width: 880px;
   max-width: 90%;
@@ -143,6 +149,12 @@ main .project a {
 }
 main .project img {
   max-width: 220px;
+  margin-left: 20px;
+}
+main .project pre {
+  max-width: 420px;
+  overflow: hidden;
+  text-align: left;
   margin-left: 20px;
 }
 main .project:hover {
