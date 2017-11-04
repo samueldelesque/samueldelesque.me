@@ -1,3 +1,9 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
 .clearfix {
   zoom: 1;
 }
@@ -12,8 +18,10 @@
 * {
   box-sizing: border-box;
 }
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
+  color: #26b;
 }
 img {
   max-width: 100%;
@@ -23,58 +31,28 @@ body {
   margin: 0;
   font-family: "Lato", "Helvetica Neue", Helvetica, Sans-Serif;
   font-size: 20px;
+  letter-spacing: -0.3px;
   background: #fafafa;
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-attachment: fixed;
+}
+.marker {
+  position: absolute;
+  background: #F92122;
+  width: 25px;
+  height: 5px;
+  left: 20px;
+  top: 20px;
+  z-index: 999;
 }
 main {
-  padding: 50px 0;
-}
-footer {
-  color: #666;
-  background-color: #111;
-  color: #111;
-  text-align: center;
-  padding: 50px 0 100px 0;
-  z-index: 97;
-}
-footer a {
-  line-height: 1.2;
-  font-size: 18px;
-  margin: 0 15px;
-  color: #666;
-  display: inline-block;
-  -webkit-transition: all 0.1s ease-out;
-  -moz-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-}
-footer a:hover {
-  color: #fff;
-  -webkit-transition-delay: 0;
-  transition-delay: 0;
-}
-@media screen (max-width: 720px){
-  footer a{
-    margin: 0 5px;
-  }
-}
-#intro .wrap {
-  max-width: 95%;
-  margin: 0 auto;
-  padding: 50px;
-}
-#intro .wrap h3 {
-  margin: 0;
-  font-size: 180px;
-  line-height: 1;
-  letter-spacing: 0;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 10px -10px 0 #000000;
+  padding: 60px 0;
 }
 article {
   width: 880px;
   max-width: 90%;
-  margin: 40px auto 0 auto;
+  margin: 0 auto;
 }
 article header {
   margin-top: 50px;
@@ -98,83 +76,88 @@ article .status{
 article .status strong{
     color: red;
 }
-article header h1:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 412px;
-  max-width: 100%;
-  height: 9px;
-  background: #26b;
-  bottom: -30px;
+.Buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
-article header h1 strong {
+.Buttons a {
+  margin-right: 10px;
+}
+
+header h1 strong {
   text-shadow: 2px 2px 0 #26b;
 }
-article header h1 span {
+header h1 span {
   display: block;
 }
-article header h2 {
+header h2 {
   font-size: 24px;
   margin: 0;
-  font-weight: 100;
 }
-article header .mission {
+.mission {
   margin-top: 60px;
   color: #26b;
 }
-.focus {
+main .divider {
+  text-align: center;
+  margin: 50px 0;
+}
+main .divider b {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background: #ebebeb;
+  margin: 8px;
+}
+main .focus {
   padding: 20px;
   border-left: 5px solid #26b;
   background: #fff;
 }
-.focus h2 {
+main .focus h2 {
   color: #26b;
 }
-.project {
-  background: #222;
+main .project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #123;
+  cursor: pointer;
   color: #fff;
   padding: 20px;
   margin: 20px 0 0 0;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-.project h3 {
+main .project h3 {
   margin: 0;
-  color: #bbb;
 }
-.project p {
-  font-size: 16px;
-  color: #888;
+main .project a {
+  color: #fff;
 }
-.project a {
-  color: #666;
+main .project img {
+  max-width: 220px;
+  margin-left: 20px;
 }
-.project:hover {
-  transform: scale(1.02);
+main .project:hover {
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
 }
-.grid {
-  zoom: 1;
+main .history h2 {
+  font-size: 44px;
+  font-weight: bold;
+  padding: 0 20px;
 }
-.grid:before,
-.grid:after {
-  content: "";
-  display: table;
-}
-.grid:after {
-  clear: both;
-}
-.grid .col {
-  display: inline-block;
-  float: left;
-}
-.grid .col.small {
-  width: 32%;
-  margin-right: 2%;
-}
-.grid .col.small.third {
-  margin-right: 0;
-}
-.logitem {
+main .logitem {
   background: #fff;
   position: relative;
   border-left: 5px solid #f7f7f7;
@@ -185,10 +168,10 @@ article header .mission {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-.logitem h3 {
+main .logitem h3 {
   margin: 0;
 }
-.logitem .time {
+main .logitem .time {
   font-size: 14px;
   font-weight: 100;
 }
@@ -197,36 +180,27 @@ article header .mission {
     font-size: 16px;
     padding-bottom: 50px;
   }
-  {
+  main {
     position: relative;
   }
-  .project {
+  main .project {
     margin-top: 20px;
   }
-  .grid .col {
+  main .grid .col {
     display: block;
     float: none;
   }
-  .grid .col.small {
+  main .grid .col.small {
     width: 100%;
     margin-left: 0;
   }
   article header h1 {
     font-size: 40px;
   }
-  .focus {
+  main .focus {
     padding: 20px;
   }
-}
-#payment {
-  height: 400px;
-}
-#payment .inner {
-  width: 640px;
-  max-width: 90%;
-  margin: 40px auto;
-  height: 400px;
-}
-#payment .inner .options {
-  padding: 0 20px;
+  main .history h2 {
+    font-size: 26px;
+  }
 }
