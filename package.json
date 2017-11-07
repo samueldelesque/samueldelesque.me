@@ -2,17 +2,12 @@
   "name": "samueldelesque.me",
   "version": "1.0.0",
   "description": "Resume of Samuel Delesque",
-  "main": "index.js",
-  "dependencies": {
-    "http-server": "^0.8.5"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samueldelesque/samueldelesque.me.git"
+  },
+  "scripts": {
+    "deploy": "rsync -rvz ./public/* aligator:/var/app/samueldelesque.me/public"
   },
   "keywords": [
     "resume",
@@ -22,8 +17,5 @@
   ],
   "author": "Samuel Delesque",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/samueldelesque/samueldelesque.me/issues"
-  },
-  "homepage": "https://github.com/samueldelesque/samueldelesque.me#readme"
+  "homepage": "https://samueldelesque.me"
 }
