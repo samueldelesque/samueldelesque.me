@@ -7,7 +7,7 @@
     "url": "git+https://github.com/samueldelesque/samueldelesque.me.git"
   },
   "scripts": {
-    "deploy": "rsync -rvz ./public/* aligator:/var/app/samueldelesque.me/public"
+    "deploy": "rsync -rvz ./* aligator:/var/app/samueldelesque.me  --exclude=.git --exclude=node_modules --exclude=package-lock.json"
   },
   "keywords": [
     "resume",
