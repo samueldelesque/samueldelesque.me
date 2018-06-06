@@ -142,32 +142,25 @@ main .grid .project {
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   body {
     font-size: 16px;
     padding-bottom: 50px;
   }
-  main {
-    position: relative;
-  }
-  main .project {
-    margin-top: 20px;
-  }
-  main .grid .col {
-    display: block;
-    float: none;
-  }
-  main .grid .col.small {
-    width: 100%;
-    margin-left: 0;
+  .mission {
+    font-size: 22px;
   }
   article header h1 {
     font-size: 40px;
   }
-  main .focus {
-    padding: 20px;
-  }
   main .history h2 {
     font-size: 26px;
+  }
+  main .grid .project {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  main .project img {
+    margin-left: 0;
   }
 }
