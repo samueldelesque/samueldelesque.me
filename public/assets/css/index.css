@@ -122,8 +122,6 @@ main .project pre {
 }
 main .history h2, main .projects h2 {
   padding: 50px 20px 0 20px;
-  margin-top: 50px;
-  border-top: 10px solid #123;
 }
 main .project {
   position: relative;
@@ -141,6 +139,18 @@ main .time {
 main .grid .project {
   display: flex;
   justify-content: space-between;
+}
+.tags {
+  margin-top: 20px;
+}
+.tags span {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 1px 4px;
+  border-radius: 2px;
+  background-color: black;
+  color: white;
+  font-size: 12px;
 }
 @media screen and (max-width: 500px) {
   body {
