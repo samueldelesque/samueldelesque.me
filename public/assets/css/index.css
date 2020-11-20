@@ -1,27 +1,5 @@
-.clearfix {
-  zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
 * {
   box-sizing: border-box;
-}
-a, a:visited {
-  text-decoration: none;
-  color: black;
-}
-h2,h3 {
-  font-weight: 400;
-}
-a:hover, a:visited:hover {
-  text-decoration: none;
-  color: #0f5dab;
 }
 img {
   max-width: 100%;
@@ -29,7 +7,6 @@ img {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Sans-Serif;
   font-size: 20px;
   letter-spacing: -0.3px;
   background: #fafafa;
@@ -37,145 +14,65 @@ body {
   background-position: 0 0;
   background-attachment: fixed;
 }
-main {
-  padding: 60px 0;
-}
-pre {
-  font-size: 11px;
-  background-color: black;
-  color: white;
-  padding: 20px;
-}
-article {
-  width: 880px;
-  max-width: 90%;
-  margin: 0 auto;
-}
-article header {
-  margin-top: 50px;
-  padding: 20px;
-}
-article header h1 {
+h1, h2, h3 {
+  font-family: "Avenir", Helvetica, Sans-Serif;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-weight: 800;
   margin: 0;
-  font-weight: bold;
-  text-align: left;
-  font-size: 40px;
-  color: black;
-  position: relative;
 }
-article .status {
-    font-size: 24px;
-    margin:20px 0;
-    color:black;
-    position: relative;
+@media (max-width: 1000px) {
+  h1, h2, h3 {
+    font-size: 1.8rem;
+  }
 }
-article .status strong {
-    color: red;
+h1 {
+  margin-top: 2rem;
 }
-.Buttons {
+main {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  min-height: 100vh;
 }
-.Buttons a {
-  margin-right: 10px;
+main section {
+  max-width: 40rem;
 }
-
-header h1 strong {
-  text-shadow: 2px 2px 0 black;
-}
-header h1 span {
+a, a:visited {
+  text-decoration: none;
+  color: black;
   display: block;
-}
-header h2 {
-  font-size: 24px;
-  margin: 0;
-}
-header h3 {
-  font-size: 24px;
-  margin: 0;
-}
-.mission {
-  margin-top: 60px;
-  color: black;
-  font-size: 26px;
-}
-main .project p {
-  color: black;
-}
-main .project h3 {
-  margin: 0;
-}
-main .project img {
-  margin-left: 20px;
-  filter: url(data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id=… 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale);
-  filter: gray;
-  -webkit-filter: grayscale(100%);
-  transition-duration: 0.2s;
-}
-main .project:hover img {
-  filter: none;
-  -webkit-filter: none;
-}
-main .project pre {
-  max-width: 420px;
-  overflow: hidden;
-  text-align: left;
-  margin-left: 20px;
-}
-main .history h2, main .projects h2 {
-  padding: 50px 20px 0 20px;
-}
-main .project {
   position: relative;
-  margin: 20px 0;
-  padding: 20px;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  transition-duration: 100ms;
 }
-main .time {
-  font-size: 14px;
-  font-weight: 100;
+a:hover, a:visited:hover {
+  text-decoration: none;
+  color: #892eee;
 }
-main .grid .project {
-  display: flex;
-  justify-content: space-between;
+a:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.5rem;
+  display: block;
+  background-color: #892eee;
+  height: 0.25rem;
+  width: 4rem;
+  transition-duration: 600ms;
 }
-.tags {
+a:hover:before {
+  width: 40rem;
+  background-color: transparent;
+}
+ul {
   padding: 0;
+  margin: 0;
   list-style: none;
-  margin-top: 20px;
 }
-.tags li {
-  display: inline-block;
-  margin-right: 5px;
-  padding: 1px 4px;
-  border-radius: 2px;
-  background-color: black;
-  color: white;
-  font-size: 12px;
-}
-@media screen and (max-width: 500px) {
-  body {
-    font-size: 16px;
-    padding-bottom: 50px;
-  }
-  .mission {
-    font-size: 22px;
-  }
-  article header h1 {
-    font-size: 40px;
-  }
-  main .history h2 {
-    font-size: 26px;
-  }
-  main .grid .project {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  main .project img {
-    margin-left: 0;
-  }
+ul li {
+  padding-top: 1rem;
+  position: relative;
+  overflow: visible;
 }
